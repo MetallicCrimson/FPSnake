@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://fv1ipud35v71"]
 
-[ext_resource type="Texture2D" uid="uid://8tv41gc5xeui" path="res://metal_0077_1k_taW5mN/metal_0077_color_1k.jpg" id="2_cw6e8"]
-[ext_resource type="Texture2D" uid="uid://b48qbn7301lqi" path="res://metal_0077_1k_taW5mN/metal_0077_height_1k.png" id="3_ngwfi"]
-[ext_resource type="Texture2D" uid="uid://chgv3tptwsvkf" path="res://metal_0077_1k_taW5mN/metal_0077_roughness_1k.jpg" id="4_ymfqx"]
+[ext_resource type="Texture2D" uid="uid://8tv41gc5xeui" path="res://resources/metal_0077_1k_taW5mN/metal_0077_color_1k.jpg" id="2_cw6e8"]
+[ext_resource type="Texture2D" uid="uid://b48qbn7301lqi" path="res://resources/metal_0077_1k_taW5mN/metal_0077_height_1k.png" id="3_ngwfi"]
+[ext_resource type="Texture2D" uid="uid://chgv3tptwsvkf" path="res://resources/metal_0077_1k_taW5mN/metal_0077_roughness_1k.jpg" id="4_ymfqx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bg30v"]
 size = Vector3(400, 10, 400)

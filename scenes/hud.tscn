@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://bukxg53vu3nwi"]
 
-[ext_resource type="Texture2D" uid="uid://cyfwc526qpkv3" path="res://crosshair23.png" id="1_8fisi"]
-[ext_resource type="Script" path="res://hud.gd" id="1_gtcwm"]
-[ext_resource type="Texture2D" uid="uid://b01gpvoauj5k6" path="res://help_icon.png" id="3_cmojc"]
-[ext_resource type="Texture2D" uid="uid://bxgp1k2cu3j4p" path="res://help_icon_hover.png" id="4_tphr2"]
-[ext_resource type="Texture2D" uid="uid://0tenmwh5qhrc" path="res://about_icon.png" id="5_xjp3p"]
-[ext_resource type="Texture2D" uid="uid://l2jbuejap7v4" path="res://about_icon_hover.png" id="6_hdou2"]
-[ext_resource type="Texture2D" uid="uid://7ie35pp2pnph" path="res://apple_arrow.png" id="7_u4evl"]
-[ext_resource type="Texture2D" uid="uid://bv4kmxh5k65e7" path="res://heart_full.png" id="8_rgbs5"]
+[ext_resource type="Texture2D" uid="uid://cyfwc526qpkv3" path="res://resources/crosshair23.png" id="1_8fisi"]
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1_gtcwm"]
+[ext_resource type="Texture2D" uid="uid://b01gpvoauj5k6" path="res://resources/help_icon.png" id="3_cmojc"]
+[ext_resource type="Texture2D" uid="uid://bxgp1k2cu3j4p" path="res://resources/help_icon_hover.png" id="4_tphr2"]
+[ext_resource type="Texture2D" uid="uid://0tenmwh5qhrc" path="res://resources/about_icon.png" id="5_xjp3p"]
+[ext_resource type="Texture2D" uid="uid://l2jbuejap7v4" path="res://resources/about_icon_hover.png" id="6_hdou2"]
+[ext_resource type="Texture2D" uid="uid://7ie35pp2pnph" path="res://resources/apple_arrow.png" id="7_u4evl"]
+[ext_resource type="Texture2D" uid="uid://bv4kmxh5k65e7" path="res://resources/heart_full.png" id="8_rgbs5"]
 
 [node name="HUD" type="CanvasLayer"]
 process_mode = 2

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtdk6635eat2u"
-path="res://.godot/imported/metal_0077_normal_directx_1k.png-ad3a52fb5f7a3802cad200ef44a8e41d.ctex"
+uid="uid://7ie35pp2pnph"
+path="res://.godot/imported/apple_arrow.png-3da00d662d49fb331560d05f1d656e35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://metal_0077_1k_taW5mN/metal_0077_normal_directx_1k.png"
-dest_files=["res://.godot/imported/metal_0077_normal_directx_1k.png-ad3a52fb5f7a3802cad200ef44a8e41d.ctex"]
+source_file="res://resources/apple_arrow.png"
+dest_files=["res://.godot/imported/apple_arrow.png-3da00d662d49fb331560d05f1d656e35.ctex"]
 
 [params]
 

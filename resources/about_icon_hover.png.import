@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mmgterl1m0im"
-path="res://.godot/imported/metal_0077_ao_1k.jpg-a4fbd1722136d2f29efed5ef0ecda8ed.ctex"
+uid="uid://l2jbuejap7v4"
+path="res://.godot/imported/about_icon_hover.png-ff293b9cf77bd3ffcc1a1e30d547ff24.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://metal_0077_ao_1k.jpg"
-dest_files=["res://.godot/imported/metal_0077_ao_1k.jpg-a4fbd1722136d2f29efed5ef0ecda8ed.ctex"]
+source_file="res://resources/about_icon_hover.png"
+dest_files=["res://.godot/imported/about_icon_hover.png-ff293b9cf77bd3ffcc1a1e30d547ff24.ctex"]
 
 [params]
 

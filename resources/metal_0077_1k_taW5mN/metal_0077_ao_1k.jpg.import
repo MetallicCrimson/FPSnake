@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://281pm816ntvo"
-path.s3tc="res://.godot/imported/metal_0077_metallic_1k.jpg-145b87a2f48d789a7f606534d98068f6.s3tc.ctex"
-path.etc2="res://.godot/imported/metal_0077_metallic_1k.jpg-145b87a2f48d789a7f606534d98068f6.etc2.ctex"
+uid="uid://xg5babmpq0tr"
+path.s3tc="res://.godot/imported/metal_0077_ao_1k.jpg-8c9bbe8c508ce1c89931b7720667fff5.s3tc.ctex"
+path.etc2="res://.godot/imported/metal_0077_ao_1k.jpg-8c9bbe8c508ce1c89931b7720667fff5.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://metal_0077_1k_taW5mN/metal_0077_metallic_1k.jpg"
-dest_files=["res://.godot/imported/metal_0077_metallic_1k.jpg-145b87a2f48d789a7f606534d98068f6.s3tc.ctex", "res://.godot/imported/metal_0077_metallic_1k.jpg-145b87a2f48d789a7f606534d98068f6.etc2.ctex"]
+source_file="res://resources/metal_0077_1k_taW5mN/metal_0077_ao_1k.jpg"
+dest_files=["res://.godot/imported/metal_0077_ao_1k.jpg-8c9bbe8c508ce1c89931b7720667fff5.s3tc.ctex", "res://.godot/imported/metal_0077_ao_1k.jpg-8c9bbe8c508ce1c89931b7720667fff5.etc2.ctex"]
 
 [params]
 

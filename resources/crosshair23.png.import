@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7ie35pp2pnph"
-path="res://.godot/imported/apple_arrow.png-782038114525901e8ce564a27b0fde50.ctex"
+uid="uid://cyfwc526qpkv3"
+path="res://.godot/imported/crosshair23.png-fd10db2566f17f164c2da233fb2b45c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://apple_arrow.png"
-dest_files=["res://.godot/imported/apple_arrow.png-782038114525901e8ce564a27b0fde50.ctex"]
+source_file="res://resources/crosshair23.png"
+dest_files=["res://.godot/imported/crosshair23.png-fd10db2566f17f164c2da233fb2b45c9.ctex"]
 
 [params]
 

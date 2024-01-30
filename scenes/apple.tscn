@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cwxokau58mf1l"]
 
-[ext_resource type="Script" path="res://apple.gd" id="1_amyjd"]
+[ext_resource type="Script" path="res://scripts/apple.gd" id="1_amyjd"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_rau3n"]
 radius = 1.0
