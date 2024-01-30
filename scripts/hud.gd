@@ -89,11 +89,11 @@ func show_arrow():
 
 func display_health(health):
 	if health == 2:
-		$Heart3.texture = load("res://heart_empty.png")
+		$Heart3.texture = load("res://resources/heart_empty.png")
 	elif health == 1:
-		$Heart2.texture = load("res://heart_empty.png")
+		$Heart2.texture = load("res://resources/heart_empty.png")
 	else:
-		$Heart1.texture = load("res://heart_empty.png")
+		$Heart1.texture = load("res://resources/heart_empty.png")
 
 
 func _on_help_button_pressed():
