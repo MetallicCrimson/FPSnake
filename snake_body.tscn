@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://clvmvl6uid57n"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_y0q3r"]
+radius = 1.0
+
+[sub_resource type="CurveTexture" id="CurveTexture_igwda"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ry6pj"]
+albedo_color = Color(0, 0.901961, 0, 1)
+metallic = 0.3
+metallic_texture = SubResource("CurveTexture_igwda")
+
+[sub_resource type="SphereMesh" id="SphereMesh_hvmlq"]
+material = SubResource("StandardMaterial3D_ry6pj")
+radius = 1.0
+height = 2.0
+
+[node name="SnakeBody" type="Area3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_y0q3r")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_hvmlq")

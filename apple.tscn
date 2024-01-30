@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwxokau58mf1l"]
+
+[ext_resource type="Script" path="res://apple.gd" id="1_amyjd"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_rau3n"]
+radius = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mjv8p"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_wchum"]
+material = SubResource("StandardMaterial3D_mjv8p")
+radius = 1.0
+height = 2.0
+
+[node name="Apple" type="Area3D"]
+script = ExtResource("1_amyjd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_rau3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_wchum")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
