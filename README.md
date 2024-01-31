@@ -12,12 +12,12 @@ Well, elevating the concept into the third dimension makes it much more. Sure, c
 The snake can be turned by the left stick of a controller, the arrow keys on a keyboard, or by moving the mouse.  
 You can temporarily accelerate by hitting the A button of a controller, Space, or the right mouse button. You can also set the accelerated speed in the paused menu, but beware, very high speed can cause some bugs! (They were seldom throughout the testing, though. Mostly just leaving space between body parts, and occasionally not registering a collision.)
 
-You have three lives, as shown in the upper right corner. Each hit comes with 2 seconds of invincibility; use it wisely!
+You have three lives, as shown in the upper right corner. Each hit comes with 2 seconds of invincibility; use it wisely!  
 If the apple is not on the screen, an arrow at the edge helps to locate it.  
 You can pause/unpause with Enter (or Start on a controller).  
 You start with 100 length, the first point adds another 100, the next one adds 101, etc...
 
-Note: The game was mostly tested on a controller, and definitely feels better on one.
+Note: The game was mostly tested on a controller, and definitely feels the best on one.
 
 ## Tech details
 This game was developed by Daniel Kovacs, in Godot 4.2.1, immediately after doing the 3D tutorial. Its original purpose was to check if I can make a 3D game (albeit a quite simple one), but I might have had too much fun with it...  
