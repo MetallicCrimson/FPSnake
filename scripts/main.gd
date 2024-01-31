@@ -28,11 +28,8 @@ func _process(_delta):
 	if Input.is_action_just_pressed("restart_or_pause"):
 		get_tree().paused = true
 		
-	#temp_position = 
-	#is_apple_on_screen = apple.position.x >= 0 and apple.position.x <= window_width and apple.position.y >= 0 and apple.position.y <= window_height and not get_viewport().get_camera_3d().is_position_behind(apple.position)
 		
-		
-	if true: #not is_apple_on_screen and not apple_just_rendered:
+	if true:
 		
 		
 		var temp_pos = $Player/PlayerCamera.unproject_position(apple.position)
