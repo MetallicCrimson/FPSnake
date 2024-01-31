@@ -18,6 +18,7 @@ func _ready():
 	$HelpSign.hide()
 	$AboutSign.hide()
 	$SpeedChange.hide()
+	$StartTouchButton.hide()
 	var temp_size = get_viewport().size
 	half_width = temp_size[0] / 2
 	half_height = temp_size[1] / 2
@@ -34,13 +35,14 @@ func _process(_delta):
 			get_tree().reload_current_scene()
 		elif paused_flag:
 			acc_changed.emit(acc_speed)
+			$StartTouchButton.hide()
 			$PauseSign.hide()
 			$HelpButton.hide()
 			$AboutButton.hide()
 			$HelpSign.hide()
 			$AboutSign.hide()
 			$SpeedChange.hide()
-			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+			#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			get_tree().paused = false
 			paused_flag = false
 		else:
@@ -58,6 +60,7 @@ func display_body_length(length):
 func game_over():
 	gameover_flag = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	$StartTouchButton.show()
 	$SpeedChange.show()
 	$HelpButton.show()
 	$AboutButton.show()
@@ -65,7 +68,9 @@ func game_over():
 
 
 func pause():
+	paused_flag = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	$StartTouchButton.show()
 	$SpeedChange.show()
 	$HelpButton.show()
 	$AboutButton.show()
@@ -144,3 +149,24 @@ func _on_about_button_pressed():
 func _on_speed_slider_value_changed(value):
 	acc_speed = value
 	$SpeedChange/Label3.text = "Accelerated speed: " + str(value)
+
+
+func _on_start_touch_button_pressed():
+	if gameover_flag:
+		get_tree().paused = false
+		get_tree().reload_current_scene()
+	elif paused_flag:
+		acc_changed.emit(acc_speed)
+		$StartTouchButton.hide()
+		$PauseSign.hide()
+		$HelpButton.hide()
+		$AboutButton.hide()
+		$HelpSign.hide()
+		$AboutSign.hide()
+		$SpeedChange.hide()
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		get_tree().paused = false
+		paused_flag = false
+	else:
+		paused_flag = true
+		pause()

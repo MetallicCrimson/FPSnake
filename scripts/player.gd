@@ -68,11 +68,6 @@ func is_overlapping_something(vect):
 	return vect.distance_to(position) < 4 or body_array.any(func(temp_pos): return vect.distance_to(temp_pos.position) < 4)
 
 
-func _on_body_timer_timeout():
-	pass
-	#next_body.emit()
-
-
 func _on_hud_acc_changed(speed):
 	print("New acc: ", speed)
 	acc_speed = speed

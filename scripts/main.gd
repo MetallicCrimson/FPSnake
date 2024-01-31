@@ -14,7 +14,7 @@ var origo_point
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	var temp_size = get_tree().get_root().size
 	window_width = temp_size[0]
 	window_height = temp_size[1]
@@ -24,12 +24,16 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+	if $TouchLayer/PauseTouchButton.visible == false:
+		$TouchLayer/PauseTouchButton.show()
+	
 	
 	if Input.is_action_just_pressed("restart_or_pause"):
 		get_tree().paused = true
 		
 	#temp_position = 
-	#is_apple_on_screen = apple.position.x >= 0 and apple.position.x <= window_width and apple.position.y >= 0 and apple.position.y <= window_height and not get_viewport().get_camera_3d().is_position_behind(apple.position)
+	#is_apple_on_screen = apple.position.x >= 0 and apple.position.x <= window_width
+	#and apple.position.y >= 0 and apple.position.y <= window_height and not get_viewport().get_camera_3d().is_position_behind(apple.position)
 		
 		
 	if true: #not is_apple_on_screen and not apple_just_rendered:
@@ -123,6 +127,7 @@ func _on_player_delete_body():
 
 func _on_player_game_over():
 	$HUD.game_over()
+	$TouchLayer/PauseTouchButton.hide()
 	get_tree().paused = true
 
 
@@ -133,3 +138,9 @@ func _on_player_hit(health):
 func _on_ee_body_entered(_body):
 	$HUD.game_over()
 	get_tree().paused = true
+
+
+func _on_pause_touch_button_pressed():
+	$TouchLayer/PauseTouchButton.hide()
+	get_tree().paused = true
+	$HUD.pause()

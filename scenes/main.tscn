@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bjrpftgh1uapg"]
+[gd_scene load_steps=14 format=3 uid="uid://bjrpftgh1uapg"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_ttt8c"]
 [ext_resource type="PackedScene" uid="uid://cwxokau58mf1l" path="res://scenes/apple.tscn" id="2_itb1u"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://fv1ipud35v71" path="res://scenes/wallv_2.tscn" id="4_fyryl"]
 [ext_resource type="PackedScene" uid="uid://yvc3fa1htxh2" path="res://scenes/player.tscn" id="5_srjoi"]
 [ext_resource type="PackedScene" uid="uid://bukxg53vu3nwi" path="res://scenes/hud.tscn" id="6_n2b3l"]
+[ext_resource type="Texture2D" uid="uid://brqeon6vbi0up" path="res://resources/pause_icon.png" id="7_5uiyr"]
+[ext_resource type="Texture2D" uid="uid://dk2nq7oo3fiys" path="res://resources/acc_icon.png" id="8_agtoq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hgksg"]
 albedo_color = Color(1, 0, 0, 1)
@@ -16,6 +18,12 @@ size = Vector3(40, 1, 40)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gj10h"]
 size = Vector3(40, 1, 40)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wqx7o"]
+radius = 50.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vsbxb"]
+size = Vector2(200, 200)
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ttt8c")
@@ -70,6 +78,19 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -0.
 text = "Wow, you flew all the way here? I'm so honored!"
 font_size = 200
 
+[node name="TouchLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseTouchButton" type="TouchScreenButton" parent="TouchLayer"]
+position = Vector2(1396, 24)
+texture_normal = ExtResource("7_5uiyr")
+shape = SubResource("CircleShape2D_wqx7o")
+
+[node name="AccelerateTouchButton" type="TouchScreenButton" parent="TouchLayer"]
+position = Vector2(1637, 197)
+texture_normal = ExtResource("8_agtoq")
+shape = SubResource("RectangleShape2D_vsbxb")
+action = "accelerate"
+
 [connection signal="body_exited" from="Player" to="." method="_on_player_body_exited"]
 [connection signal="delete_body" from="Player" to="." method="_on_player_delete_body"]
 [connection signal="game_over" from="Player" to="." method="_on_player_game_over"]
@@ -78,3 +99,4 @@ font_size = 200
 [connection signal="ready" from="Player" to="." method="_on_player_ready"]
 [connection signal="acc_changed" from="HUD" to="Player" method="_on_hud_acc_changed"]
 [connection signal="body_entered" from="EE" to="." method="_on_ee_body_entered"]
+[connection signal="pressed" from="TouchLayer/PauseTouchButton" to="." method="_on_pause_touch_button_pressed"]
