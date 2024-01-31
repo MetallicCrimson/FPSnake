@@ -35,7 +35,7 @@ This was done the day after the initial publish, after getting some great insigh
  - modifying and exporting it into Android
 
 ## Installation
-No need to install, [releases can be found here for Windows, Linux, Mac, and Android.](https://github.com/MetallicCrimson/FPSnake/releases/tag/v0.9.1)  Just download the appropriate executable file, and have fun with it.
+No need to install, [releases can be found here for Windows, Linux, Mac,](https://github.com/MetallicCrimson/FPSnake/releases/tag/v0.9.1-desktop) and [here for Android.](https://github.com/MetallicCrimson/FPSnake/releases/tag/v0.9.1-mobile)  Just download the appropriate executable file, and have fun with it.
 
 Note 1: I still don't own a Mac (nor do I intend to), so I couldn't test that version. I've heard it can be really picky, especially because I'm not a certified Apple developer. If you encounter these problems, sorry; it might be better to just run the source code itself.
 
