@@ -6,7 +6,7 @@
 radius = 1.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_iuom4"]
-radius = 0.6
+radius = 0.55
 
 [node name="Player" type="RigidBody3D"]
 input_ray_pickable = false
@@ -30,7 +30,12 @@ shape = SubResource("SphereShape3D_iuom4")
 wait_time = 2.0
 one_shot = true
 
+[node name="BodyTimer" type="Timer" parent="."]
+wait_time = 0.06
+autostart = true
+
 [connection signal="area_entered" from="PlayerArea" to="." method="_on_player_area_area_entered"]
 [connection signal="area_exited" from="PlayerArea" to="." method="_on_player_area_area_exited"]
 [connection signal="body_entered" from="PlayerArea" to="." method="_on_player_area_body_entered"]
 [connection signal="area_exited" from="NextBodyArea" to="." method="_on_next_body_area_area_exited"]
+[connection signal="timeout" from="BodyTimer" to="." method="_on_body_timer_timeout"]

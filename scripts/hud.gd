@@ -5,6 +5,9 @@ var gameover_flag = false
 var half_width
 var half_height
 var origo_point
+var acc_speed = 80
+
+signal acc_changed(speed)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,6 +17,7 @@ func _ready():
 	$AboutButton.hide()
 	$HelpSign.hide()
 	$AboutSign.hide()
+	$SpeedChange.hide()
 	var temp_size = get_viewport().size
 	half_width = temp_size[0] / 2
 	half_height = temp_size[1] / 2
@@ -29,11 +33,14 @@ func _process(_delta):
 			get_tree().paused = false
 			get_tree().reload_current_scene()
 		elif paused_flag:
+			acc_changed.emit(acc_speed)
 			$PauseSign.hide()
 			$HelpButton.hide()
 			$AboutButton.hide()
 			$HelpSign.hide()
 			$AboutSign.hide()
+			$SpeedChange.hide()
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			get_tree().paused = false
 			paused_flag = false
 		else:
@@ -50,12 +57,16 @@ func display_body_length(length):
 
 func game_over():
 	gameover_flag = true
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	$SpeedChange.show()
 	$HelpButton.show()
 	$AboutButton.show()
 	$GameOverSign.show()
 
 
 func pause():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	$SpeedChange.show()
 	$HelpButton.show()
 	$AboutButton.show()
 	$PauseSign.show()
@@ -89,11 +100,11 @@ func show_arrow():
 
 func display_health(health):
 	if health == 2:
-		$Heart3.texture = load("res://resources/heart_empty.png")
+		$Heart3.texture = load("res://resources/heart_empty_2.png")
 	elif health == 1:
-		$Heart2.texture = load("res://resources/heart_empty.png")
+		$Heart2.texture = load("res://resources/heart_empty_2.png")
 	else:
-		$Heart1.texture = load("res://resources/heart_empty.png")
+		$Heart1.texture = load("res://resources/heart_empty_2.png")
 
 
 func _on_help_button_pressed():
@@ -128,3 +139,8 @@ func _on_about_button_pressed():
 		$GameOverSign.hide()
 
 	$AboutSign.show()
+
+
+func _on_speed_slider_value_changed(value):
+	acc_speed = value
+	$SpeedChange/Label3.text = "Accelerated speed: " + str(value)

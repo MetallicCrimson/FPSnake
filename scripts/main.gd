@@ -14,6 +14,7 @@ var origo_point
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	var temp_size = get_tree().get_root().size
 	window_width = temp_size[0]
 	window_height = temp_size[1]

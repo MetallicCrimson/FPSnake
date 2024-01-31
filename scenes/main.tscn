@@ -76,4 +76,5 @@ font_size = 200
 [connection signal="hit" from="Player" to="." method="_on_player_hit"]
 [connection signal="next_body" from="Player" to="." method="_on_player_next_body"]
 [connection signal="ready" from="Player" to="." method="_on_player_ready"]
+[connection signal="acc_changed" from="HUD" to="Player" method="_on_hud_acc_changed"]
 [connection signal="body_entered" from="EE" to="." method="_on_ee_body_entered"]
